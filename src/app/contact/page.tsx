@@ -26,7 +26,7 @@ export default function ContactPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          access_key: 'YOUR_WEB3FORMS_ACCESS_KEY_HERE', // <-- Replace with your Web3Forms access key
+          access_key: '3658f6b1-1313-4e04-82be-914a9ffd9b67', // <-- Replace with your Web3Forms access key
           subject: `New Project Inquiry from ${formData.name}`,
           from_name: formData.name,
           email: formData.email,
