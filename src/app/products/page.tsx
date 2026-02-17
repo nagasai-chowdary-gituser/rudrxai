@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import AnimatedSection from '@/components/AnimatedSection'
 import CTA from '@/components/CTA'
-import Link from 'next/link'
 import PageBackground from '@/components/PageBackground'
 
 export const metadata: Metadata = {

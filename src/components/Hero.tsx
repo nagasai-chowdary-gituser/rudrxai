@@ -155,7 +155,7 @@ export default function Hero() {
             { value: '99%', label: 'Satisfaction Rate' },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className={`text-3xl md:text-4xl font-extrabold ${theme === 'dark' ? 'gradient-text' : 'gradient-text'}`}>
+              <div className={`text-3xl md:text-4xl font-extrabold gradient-text`}>
                 {stat.value}
               </div>
               <div className="text-xs dark:text-gray-400 text-[#6b4b7a] mt-2 tracking-wider uppercase font-semibold">

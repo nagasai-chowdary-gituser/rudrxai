@@ -30,7 +30,14 @@ function applyThemeToDOM(theme: Theme) {
 }
 
 export default function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('dark')
+  const [theme, setTheme] = useState<Theme>(() => {
+    // On the server, default to 'dark'. On the client, read from DOM class
+    // to match what the inline script in layout.tsx already set.
+    if (typeof window !== 'undefined') {
+      return document.documentElement.classList.contains('light') ? 'light' : 'dark'
+    }
+    return 'dark'
+  })
   const [mounted, setMounted] = useState(false)
 
   // Read stored theme after mount (avoids hydration mismatch)

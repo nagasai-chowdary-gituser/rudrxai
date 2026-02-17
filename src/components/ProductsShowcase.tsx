@@ -21,7 +21,7 @@ const products = [
     description:
       'Intelligent data visualization and analytics platform that transforms raw data into actionable insights with AI-powered dashboards.',
     status: 'Live',
-    users: '2000+',
+    users: '2,000+',
     gradient: 'from-blue-600 to-cyan-600',
     features: ['Smart Charts', 'AI Insights', 'Real-time Analytics', 'Custom Dashboards'],
     link: 'https://datavision-ai-datavision.hf.space/',
@@ -54,7 +54,7 @@ const products = [
     description:
       'All-in-one generative AI studio for content creation, code generation, image synthesis, and intelligent automation workflows.',
     status: 'Live',
-    users: '1000+',
+    users: '1,000+',
     gradient: 'from-pink-600 to-rose-600',
     features: ['Content Generation', 'Code Assist', 'Image Synthesis', 'AI Workflows'],
     link: 'https://naveenkumar-2007--genai-intelligence-studi-streamlit-app-qreybr.streamlit.app/',

@@ -1,7 +1,11 @@
-'use client'
-
+import type { Metadata } from 'next'
 import PageBackground from '@/components/PageBackground'
 import AnimatedSection from '@/components/AnimatedSection'
+
+export const metadata: Metadata = {
+  title: 'Terms of Service — RUDRXAI',
+  description: 'Review the terms and conditions for using RUDRXAI services, including payment terms, intellectual property, and more.',
+}
 
 export default function TermsOfServicePage() {
   return (

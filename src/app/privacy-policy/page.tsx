@@ -1,7 +1,11 @@
-'use client'
-
+import type { Metadata } from 'next'
 import PageBackground from '@/components/PageBackground'
 import AnimatedSection from '@/components/AnimatedSection'
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy — RUDRXAI',
+  description: 'Learn how RUDRXAI collects, uses, and protects your personal data. Read our full privacy policy.',
+}
 
 export default function PrivacyPolicyPage() {
   return (

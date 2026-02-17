@@ -18,7 +18,7 @@ export default function ParticleField() {
   const animationRef = useRef<number>(0)
 
   const initParticles = useCallback((width: number, height: number) => {
-    const count = Math.min(80, Math.floor((width * height) / 18000))
+    const count = Math.min(50, Math.floor((width * height) / 30000))
     particlesRef.current = Array.from({ length: count }, () => ({
       x: Math.random() * width,
       y: Math.random() * height,
@@ -59,7 +59,16 @@ export default function ParticleField() {
     window.addEventListener('mousemove', onMouseMove)
     window.addEventListener('mouseleave', onMouseLeave)
 
+    let isVisible = true
+
+    const handleVisibilityChange = () => {
+      isVisible = !document.hidden
+      if (isVisible) animate()
+    }
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+
     const animate = () => {
+      if (!isVisible) return
       const w = window.innerWidth
       const h = window.innerHeight
       ctx.clearRect(0, 0, w, h)
@@ -120,6 +129,7 @@ export default function ParticleField() {
       window.removeEventListener('resize', resize)
       window.removeEventListener('mousemove', onMouseMove)
       window.removeEventListener('mouseleave', onMouseLeave)
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
       cancelAnimationFrame(animationRef.current)
     }
   }, [initParticles])

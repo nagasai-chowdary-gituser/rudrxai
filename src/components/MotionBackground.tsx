@@ -45,7 +45,7 @@ export default function MotionBackground() {
     canvas.height = height
 
     // ── Particles (small floating dots with connections) ──
-    const particleCount = Math.min(60, Math.floor((width * height) / 25000))
+    const particleCount = Math.min(40, Math.floor((width * height) / 40000))
     const particles: Particle[] = []
 
     const darkColors = [
@@ -263,8 +263,16 @@ export default function MotionBackground() {
     }
 
     // ── Animation loop ──
+    let isVisible = true
+
+    function handleVisibilityChange() {
+      isVisible = !document.hidden
+      if (isVisible) animate()
+    }
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+
     function animate() {
-      if (!ctx) return
+      if (!ctx || !isVisible) return
       ctx.clearRect(0, 0, width, height)
       drawOrbs()
       drawParticles()
@@ -286,6 +294,7 @@ export default function MotionBackground() {
     window.addEventListener('resize', handleResize)
     return () => {
       window.removeEventListener('resize', handleResize)
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
       cancelAnimationFrame(animationRef.current)
     }
   }, [])
