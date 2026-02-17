@@ -41,7 +41,7 @@ export default function Navbar() {
             : 'bg-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative w-9 h-9 rounded-xl overflow-hidden">
@@ -84,7 +84,7 @@ export default function Navbar() {
           </div>
 
           {/* Theme Toggle + CTA + Mobile Toggle */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             {/* Theme toggle button */}
             <button
               onClick={toggleTheme}

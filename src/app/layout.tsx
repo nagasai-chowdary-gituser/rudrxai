@@ -56,10 +56,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-sans">
+      <body className="font-sans overflow-x-hidden max-w-[100vw]">
         <ThemeProvider>
           <Navbar />
-          <main>{children}</main>
+          <main className="overflow-x-hidden">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
