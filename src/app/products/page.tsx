@@ -25,7 +25,7 @@ const products = [
     stats: { users: '2,000+', interviews: '50,000+', rating: '4.9/5' },
     gradient: 'from-violet-600 to-purple-600',
     status: 'Live',
-    link: 'https://chowdary1-ai-interviewer-version-1.hf.space/login',
+    link: 'https://chowdary1-ai-interviewer-version-2.hf.space/login',
   },
   {
     name: 'Data Vision',
